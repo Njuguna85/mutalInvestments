@@ -1,23 +1,135 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #95a5a6;
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    background: #69e09ba1;
+}
+
+.wrapper{
+    display: grid;
+    margin: auto;
+    grid-gap: 10px;
+}
+
+/* Nav Bar */
+.main-nav{
+    width: 100%;
+    background-color: #577965fa;
+}
+
+.main-nav a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-nav li{
+    display: inline;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+}
+
+.main-nav a:hover{
+    background-color: #6F1E51;
+    padding:20px;
+}
+
+
+/*Top Container Grid Areas */
+.top-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    'showcase . land_details'
+    'showcase . land_owner'
+    'l_footer l_footer l_footer';
+}
+
+/* Showcase */
+.showcase{
+    grid-area: showcase;
+    box-sizing: border-box;
+    margin-left:10px
+}
+.land_details{
+    grid-area: land_details;
+
+}
+.land_owner{
+    grid-area: land_owner;
+}
+
+.footer{
+    grid-area: l_footer;
+}
+
+/* Image Slider */
+.slide-container{
+    width: 800px;
+    height: 400px;
+    margin-right:auto;
+    margin-left: auto;
+    overflow: hidden;
+    text-align: center;
+    background-color: #27ae60;
+}
+
+.image-container{
+    width: 2400px;
+    background-color: yellow;
+    height:400px;
+    position: relative;
+    clear: both;
+    transition: left 2s;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+}
+.slider-image{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    position:relative;
+}
+
+.button-container{
+    top:-20px;
+    position: relative;
+}
+
+.slider-button{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+#slider-image-1:target ~ .image-container{
+    left: 0px;
+
+}
+#slider-image-2:target ~ .image-container{
+    left: -800px;
+  
+}
+#slider-image-3:target ~ .image-container{
+    left: -1600px;
+    
+}
+
+
 
 .box{
-    width:350px;
-    padding: 35px;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    padding: 15px;
     background:#dff9fb;
     text-align: center;
-    border-radius: 8px
+    border-radius: 8px;
 }
 
-.box input[type= "text"],.box input[type="password"]{
+
+.box input[type= "text"],.box input[type="email"],.box input[type="tel"]{
    
     background: none;
     display:block;
@@ -28,7 +140,7 @@ body{
     width: 200px;
     outline: none;
     color: #6F1E51;
-    border-radius: 24px;
+    border-radius: 8px;
     transition: 0.25s;
 
 }

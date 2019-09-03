@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document Username</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="main.css">
+    <!-- Leaflet css cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <!-- Leaflet from a CDN -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <title>Document Username</title>
+
 </head>
 
 <body>
@@ -30,8 +41,8 @@
                     <span id="slider-image-2"></span>
                     <span id="slider-image-3"></span>
                     <div class="image-container">
-                        <img src="img/A toward BC  and D.JPG" class="slider-image" >
-                        <img src="img/A toward D.JPG" class="slider-image" >
+                        <img src="img/A toward BC  and D.JPG" class="slider-image">
+                        <img src="img/A toward D.JPG" class="slider-image">
                         <img src="img/E towards A.JPG" class="slider-image">
                     </div>
                     <div class="button-container">
@@ -40,49 +51,58 @@
                         <a href="#slider-image-3" class="slider-button"></a>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur repellat ut beatae dolore
-                    delectus!</p>
+                <!-- Div to hold the map -->
+                <div id="map" class="map" style="width: 800px; height: 400px"></div>
+                <p class="caption">Four portions of land on Sale in Olkeri Area. Its Location is well accesible and boasts amenities such as 
+                    closeness to a Olkeri Police Post, Olkeri Water Project with the area being in a residential community.
+                    The area is also accesible from numerous entry points ie From Ngong-Kiserian Road, Karen, Rongai-Gataka Road.
+                </aside></p>
                 <div class="ui buttons">
-                    <button class="ui button">Images</button>
+                    <button class="ui button" onclick="switch_layout('slide-container')">Images</button>
                     <div class="or"></div>
-                    <button class="ui positive button">Map</button>
+                    <button class="ui positive button" onclick="switch_layout('map')">Map</button>
                 </div>
             </div>
 
 
             <div class="land_details">
                 <h4>Land Details</h4>
-                <p id="size">Size: </p>
-                <p id="price">Price: </p>
-                <p id="dist">Accessibility</p>
+                <p id="size">Size: 1/8th Acre(0.045ha) Each</p>
+                <p id="price">Price: 4M (Negotiable) </p>
+                <p id="dist">Accessibility: 100m From Tarmac</p>
                 <button type="button">Inquire</button>
             </div>
 
             <!-- Owner Details -->
             <div class="land_owner">
                 <h4>Owner Details</h4>
-                <p id="name">Name: </p>
-                <p class="phone-no">Phone Number: </p>
+                <p id="name">Name: Paulo Sokoto</p>
+                <p class="phone-no">Phone Number: +254 717 900902 </p>
             </div>
         </section>
 
-        <!-- Pagination
-        <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a class="active" href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
-              </div>  -->
-        <!-- Footer -->
+        <script>
+            // Create a new instance of the map class
+            var my_map = L.map(
+                'map', {
+                    center: [-1.37924965, 36.69550797],
+                    zoom: 16,
+                });
+
+            var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', { attribution: '<a href="http://mutall.co.ke">Mutall</a>' }).addTo(my_map);
+
+            var land_marker1 = L.marker([-1.37920428, 36.69532837]).addTo(my_map);
+            var land_marker2 = L.marker([-1.37924965, 36.69550797]).addTo(my_map);
+        </script>
+
+
+        <!--Footer -->
         <footer class="l_footer">
             <p>Mutall Land Investments &COPY; 2019</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

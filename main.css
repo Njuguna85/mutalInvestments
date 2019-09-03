@@ -8,7 +8,6 @@ body{
 }
 
 .wrapper{
-    display: grid;
     margin: auto;
     grid-gap: 10px;
 }
@@ -17,6 +16,10 @@ body{
 .main-nav{
     width: 100%;
     background-color: #577965fa;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+
 }
 
 .main-nav a{
@@ -42,20 +45,20 @@ body{
     display: grid;
     grid-gap: 10px;
     grid-template-areas:
-    'showcase . land_details'
-    'showcase . land_owner'
-    'l_footer l_footer l_footer';
+    'showcase land_details'
+    'showcase land_owner'
+    'l_footer l_footer';
 }
 
 /* Showcase */
 .showcase{
     grid-area: showcase;
+    margin-top: 10px;
     box-sizing: border-box;
-    margin-left:10px
 }
 .land_details{
     grid-area: land_details;
-
+    margin-left: 0px;
 }
 .land_owner{
     grid-area: land_owner;
@@ -64,6 +67,14 @@ body{
 .footer{
     grid-area: l_footer;
 }
+
+
+#map{
+    grid-area: showcase;
+    display: none;
+    margin-left: 20px;
+}
+
 
 /* Image Slider */
 .slide-container{
@@ -119,8 +130,64 @@ body{
     
 }
 
+.caption{
+    margin-left: 20px;
+    text-align: center;
+}
 
 
+
+/* Media Queries */
+/* 
+    Device = Desktops
+    Screen higher than 1281px
+*/
+@media(min-width:1281px){
+
+}
+
+
+/* 
+    Device= Laptops, Desktops
+    Screen b2n 1025px to 1280px
+*/
+@media(min-width:1025px) and (max-width:1280px){
+
+}
+
+/* 
+    Device = Tablets, Ipads
+    Screen b2n 768px to 1024px
+*/
+@media(min-width: 768px) and (max-width:1024px){
+
+}
+
+/* 
+    Device = Tablets, Ipads
+    Screen b2n 768px to 1024px
+*/
+@media(min-width:768px) and (max-width:1024px){
+
+}
+
+/* 
+    Device = Low resolution tablets, Mobiles
+    Screen b2n 481px to 767px
+*/
+@media(min-width:481px) and (max-width:767px){
+
+}
+
+/*
+    Device = Most of the Smartphones (Potrait)
+    Screen b2n 320px to 479px
+*/
+@media(min-width: 320px) and (max-width:479px){
+
+}
+
+    /*  Inquiry Box  */
 .box{
     padding: 15px;
     background:#dff9fb;
@@ -128,8 +195,7 @@ body{
     border-radius: 8px;
 }
 
-
-.box input[type= "text"],.box input[type="email"],.box input[type="tel"]{
+.box input[type= "text"],.box input[type="email"],.box input[type="tel"],.box input[type="email"]{
    
     background: none;
     display:block;
@@ -144,11 +210,13 @@ body{
     transition: 0.25s;
 
 }
-.box input[type= "text"]:focus,.box input[type="password"]:focus{
+
+.box input[type= "text"]:focus,.box input[type="password"],.box input[type="tel"],.box input[type="email"]:focus{
     width: 280px;
     border-color: #4df024;
 
 }
+
 .box input[type="submit"]{
     border: 0;
     background: none;
@@ -163,6 +231,7 @@ body{
     transition: 0.25s;
     cursor: pointer;
 }
+
 .box input[type="submit"]:hover{
     background:#4df024;
 }
@@ -172,3 +241,4 @@ body{
      text-transform: uppercase;
      font-weight: 500;
 }
+

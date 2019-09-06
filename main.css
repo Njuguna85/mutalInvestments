@@ -9,7 +9,6 @@ body{
 
 .wrapper{
     margin: auto;
-    grid-gap: 10px;
 }
 
 /* Nav Bar */
@@ -42,39 +41,49 @@ body{
 
 /*Top Container Grid Areas */
 .top-container{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas:
-    'showcase land_details'
-    'showcase land_owner'
-    'l_footer l_footer';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start
 }
 
 /* Showcase */
 .showcase{
-    grid-area: showcase;
+    
     margin-top: 10px;
     box-sizing: border-box;
-}
-.land_details{
-    grid-area: land_details;
-    margin-left: 0px;
-}
-.land_owner{
-    grid-area: land_owner;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex: 1 1 800px;
+    width: 800px;
+    
 }
 
-.footer{
-    grid-area: l_footer;
+.content-land{
+    flex-direction: column;
+}
+
+.caption{
+    margin-left: 20px;
+    text-align: center;
+    justify-content: space-around;
+}
+.switch_buttons{
+    flex-wrap: nowrap;
+    flex: 0 0  50px;
+}
+.l_footer{
+    text-align: center;
+    justify-content: flex-end;
 }
 
 
 #map{
-    grid-area: showcase;
+    
     display: none;
     margin-left: 20px;
 }
-
 
 /* Image Slider */
 .slide-container{
@@ -129,13 +138,6 @@ body{
     left: -1600px;
     
 }
-
-.caption{
-    margin-left: 20px;
-    text-align: center;
-}
-
-
 
 /* Media Queries */
 /* 

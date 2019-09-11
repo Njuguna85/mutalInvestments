@@ -6,10 +6,11 @@
 }
 
 body {
-    font-size: 16px;
-    line-height: 1.7;
-    font-family: Arial, Helvetica, sans-serif;
     background: #69e09ba1;
+}
+
+.wrapper {
+    margin: auto;
 }
 
 /* Nav Bar */
@@ -51,6 +52,8 @@ body {
 
 /* Showcase */
 .showcase {
+
+    margin-top: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -218,19 +221,14 @@ img {
     width: 250px;
 }
 
-.inquire {
-    position: relative;
-    left: 40%;
-    margin-top: 40px;
+#slider-image-2:target~.image-container {
+    left: -800px;
+
 }
 
-.l_footer {
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    background: #577965fa;
-    width: 100%;
-    color: #dff9fb;
+#slider-image-3:target~.image-container {
+    left: -1600px;
+
 }
 
 
@@ -239,109 +237,41 @@ img {
     Device = Desktops
     Screen higher than 1281px
 */
-@media(min-width:768px) and (max-width:1024px) {
-    .main-nav {
-        width: 100%;
-    }
-
-    .showcase {
-        width: 100%;
-    }
+@media(min-width:1281px) {}
 
     .slide-container {
         width: 800px;
     }
 
-    .caption {
-        width: 100%;
-    }
+/* 
+    Device= Laptops, Desktops
+    Screen b2n 1025px to 1280px
+*/
+@media(min-width:1025px) and (max-width:1280px) {}
 
-    .buttons {
-        margin: auto;
-        width: 50%;
-    }
+/* 
+    Device = Tablets, Ipads
+    Screen b2n 768px to 1024px
+*/
+@media(min-width: 768px) and (max-width:1024px) {}
 
-    .content-land {
-        width: 50%;
-        margin: auto;
-    }
-
-    .land_details {
-        width: 100%;
-    }
-
-    .land_owner {
-        width: 100%;
-    }
-}
+/* 
+    Device = Tablets, Ipads
+    Screen b2n 768px to 1024px
+*/
+@media(min-width:768px) and (max-width:1024px) {}
 
 /* 
     Device = Low resolution tablets, Mobiles
     Screen b2n 481px to 767px
 */
-@media(min-width:481px) and (max-width:767px) {
-    .main-nav {
-        width: 100%;
-    }
-
-    .showcase {
-        width: 100%;
-    }
-
-    .slide-container {
-        width: 100%;
-    }
-
-    .buttons {
-        margin: auto;
-        width: 50%;
-    }
-
-    .content-land {
-        width: 50%;
-        margin: auto;
-    }
-
-    .land_details {
-        width: 100%;
-    }
-
-    .land_owner {
-        width: 100%;
-    }
-}
+@media(min-width:481px) and (max-width:767px) {}
 
 /*
     Device = Most of the Smartphones (Potrait)
     Screen b2n 320px to 479px
 */
-@media(min-width: 320px) and (max-width:479px) {
-    .main-nav {
-        width: 100%;
-    }
-
-    .showcase {
-        width: 100%;
-    }
-
-    .buttons {
-        margin: auto;
-        width: 50%;
-    }
-
-    .content-land {
-        width: 50%;
-        margin: auto;
-    }
-
-    .land_details {
-        width: 100%;
-    }
-
-    .land_owner {
-        width: 100%;
-    }
-}
+@media(min-width: 320px) and (max-width:479px) {}
 
 /*  Inquiry Box  */
 .box {
@@ -402,4 +332,53 @@ img {
     color: #34495e;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.buttons {
+    display: inline-flex;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    background: #e0e1e2 none;
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    text-align: center;
+    border-radius: .28571429rem;
+}
+
+.buttons .or {
+    position: relative;
+    width: .3em;
+    height: 2.57142857em;
+    z-index: 3;
+
+}
+
+.buttons .or::before {
+    position: absolute;
+    text-align: center;
+    border-radius: 500rem;
+    content: 'or';
+    top: 50%;
+    left: 50%;
+    background-color: #69e09ba1     ;
+    text-shadow: none;
+    margin-top: -.89285714em;
+    margin-left: -.89285714em;
+    width: 1.78571429em;
+    height: 1.78571429em;
+    line-height: 1.78571429em;
+    color: rgba(0, 0, 0, .4);
+    font-style: normal;
+    font-weight: 700;
+    -webkit-box-shadow: 0 0 0 1px transparent inset;
+    box-shadow: 0 0 0 1px transparent inset;
 }

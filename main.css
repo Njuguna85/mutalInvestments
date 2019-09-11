@@ -265,7 +265,37 @@ img {
     Device = Low resolution tablets, Mobiles
     Screen b2n 481px to 767px
 */
-@media(min-width:481px) and (max-width:767px) {}
+@media(min-width:481px) and (max-width:767px) {
+        .main-nav {
+        width: 100%;
+    }
+
+    .showcase {
+        width: 100%;
+    }
+
+    .slide-container {
+        width: 100%;
+    }
+
+    .buttons {
+        margin: auto;
+        width: 50%;
+    }
+
+    .content-land {
+        width: 50%;
+        margin: auto;
+    }
+
+    .land_details {
+        width: 100%;
+    }
+
+    .land_owner {
+        width: 100%;
+    }
+}
 
 /*
     Device = Most of the Smartphones (Potrait)

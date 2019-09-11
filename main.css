@@ -280,7 +280,7 @@ img {
     Screen b2n 481px to 767px
 */
 @media(min-width:481px) and (max-width:767px) {
-    .main-nav {
+        .main-nav {
         width: 100%;
     }
 

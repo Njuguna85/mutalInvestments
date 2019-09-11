@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
     <!-- Leaflet css cdn link -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -33,28 +35,28 @@
     <!-- Property Details -->
     <section class="content-wrapper">
         <div class="showcase">
-            <div class="slide-container">
-                <span id="slider-image-1"></span>
-                <span id="slider-image-2"></span>
-                <span id="slider-image-3"></span>
-                <div class="image-container">
-                    <img src="img/A toward BC  and D.JPG" class="slider-image">
-                    <img src="img/A toward D.JPG" class="slider-image">
-                    <img src="img/E towards A.JPG" class="slider-image">
-                </div>
-                <div class="button-container">
-                    <a href="#slider-image-1" class="slider-button"></a>
-                    <a href="#slider-image-2" class="slider-button"></a>
-                    <a href="#slider-image-3" class="slider-button"></a>
-                </div>
+            <!-- <div class="slide-container"> -->
+            <div class="cycle-slideshow" data-cycle-pager-template="<a class='thumb'href='#'><img src='{{src}}'></a>">
+                <span class="cycle-pager"></span>
+                <span class="cycle-prev">&#9001;</span>
+                <span class="cycle-next">&#9002;</span>
+
+                <img src="img/A toward BC  and D.JPG" alt="">
+                <img src="img/A toward D.JPG" alt="">
+                <img src="img/E towards A.JPG" alt="">
+                <img src="img/E towards D.JPG" alt="">
+                <img src="img/from main road toward point A.JPG" alt="">
+                <img src="img/point E towards BC.JPG" alt="">
+                <img src="img/mutation.jpeg" alt="">
             </div>
+
 
             <!-- Div to hold the map -->
             <div id="map" class="map" style="width: 800px; height: 400px"></div>
 
             <!-- Switch Buttons -->
             <div class="buttons">
-                <button class="images_btn button" onclick="switch_layout('slide-container')">Images</button>
+                <button class="images_btn button" onclick="switch_layout('cycle-slideshow')">Images</button>
                 <div class="or"></div>
                 <button class="map_btn button" onclick="switch_layout('map')">Map</button>
             </div>

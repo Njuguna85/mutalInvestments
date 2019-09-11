@@ -1,4 +1,4 @@
-let default_view = "slide-container";
+let default_view = "cycle-slideshow";
 
 function switch_layout(layout){
     if(layout != default_view){

@@ -54,7 +54,6 @@ img {
 /* Map Div */
 #map {
     display: none;
-    
     box-sizing: border-box;
 }
 .map{
@@ -214,6 +213,9 @@ h4 {
     background: #06ce59;
     color: #dff9fb;
 }
+#map2{
+    display: none;
+}
 
 
 /* Media Queries */
@@ -259,9 +261,10 @@ h4 {
     }
 
     .sale-tag {
-        font-size: 15px;
+        font-size: 4vw;
+        line-height: 1;
         margin: auto;
-        padding: 0;
+        padding: 5px 0;
         left: 0;
     }
 
@@ -279,18 +282,17 @@ h4 {
         text-align: center;
         margin-top: 20px;
     }
-    #read_more{
-        display: block;
-        margin-top: 20px;
-        margin: auto;
-    }
-    #map2{
-        width: 90%;
-        margin: 0 auto;
-        display: block;        
+    .land_owner{
+        padding-top: 10px;
     }
     .caption{
-        display: none;
+        padding-top: 10px;
+        text-align: center;
+    }
+    #map2{
+        width: 100%;
+        margin: 10px auto;
+        display: block;        
     }
 }
 

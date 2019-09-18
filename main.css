@@ -52,13 +52,9 @@ img {
 }
 
 /* Map Div */
-#map {
+#map1{
     display: none;
-    box-sizing: border-box;
-}
-.map{
     width: 780px;
-    height: 390px;
 }
 
 .cycle-slideshow {

@@ -30,7 +30,7 @@ function show_map(params) {
     });
 
     var land_marker = L.marker(
-        [-1.37924965, 36.69550797],
+        [-1.382003, 36.696138],
         { icon: customIcon }).addTo(my_map);
     land_marker.bindPopup('<strong>Land For Sale</strong><br/>3km From Main Road').openPopup();
 }

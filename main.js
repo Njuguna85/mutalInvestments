@@ -31,9 +31,8 @@ function show_map(params) {
 
     var land_marker = L.marker(
         [-1.37924965, 36.69550797],
-        { icon: customIcon })
-        .bindPopup('<strong>Land For Sale</strong><br/>3km From Main Road')
-        .addTo(my_map);
+        { icon: customIcon }).addTo(my_map);
+    land_marker.bindPopup('<strong>Land For Sale</strong><br/>3km From Main Road').openPopup();
 }
 show_map('map1');
 show_map('map2');

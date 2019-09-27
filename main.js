@@ -8,6 +8,7 @@ function switch_layout(layout) {
     }
 
 }
+
 function show_map(params) {
     // Create a new instance of the map class
     var my_map = L.map(
@@ -20,19 +21,23 @@ function show_map(params) {
         my_map.invalidateSize();
     }, 100);
 
-    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', { attribution: '<a href="http://mutall.co.ke">Mutall</a>' }).addTo(my_map);
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?', {
+        attribution: '<a href="http://mutall.co.ke">Mutall</a>'
+    }).addTo(my_map);
 
-    var customIcon = L.icon({
+    var landIcon = L.icon({
         iconUrl: 'img/marker.png',
         iconSize: [20, 20],
         popupAncor: [-3, -76],
-
     });
 
     var land_marker = L.marker(
-        [-1.382003, 36.696138],
-        { icon: customIcon }).addTo(my_map);
-    land_marker.bindPopup('<strong>Land For Sale</strong><br/>3km From Main Road').openPopup();
+        [-1.382003, 36.696138], {
+            icon: landIcon
+        }).addTo(my_map);
+
+    land_marker.bindPopup('<b>Land For Sale</b><br/>3km From Main Road').openPopup();
+
 }
 show_map('map1');
 show_map('map2');

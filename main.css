@@ -47,8 +47,9 @@ body {
 img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 100%;
+    object-fit: contain;
+    
 }
 
 /* Map Div */
@@ -60,6 +61,7 @@ img {
 .cycle-slideshow {
     display: block;
     position: relative;
+    height: 410px;
 }
 
 .cycle-prev,
@@ -109,7 +111,7 @@ img {
 }
 
 .cycle-pager .thumb {
-    width: 10%;
+    width: 8%;
 }
 
 .thumb {

@@ -26,7 +26,6 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-left: 20px;
     width: 800px;
 }
 
@@ -49,11 +48,11 @@ img {
     width: 100%;
     max-height: 100%;
     object-fit: contain;
-    
+
 }
 
 /* Map Div */
-#map1{
+#map1 {
     display: none;
     width: 780px;
 }
@@ -139,7 +138,8 @@ h4 {
     color: #06ce59;
     font-size: 14px;
 }
-#read_more{
+
+#read_more {
     display: none
 }
 
@@ -210,7 +210,8 @@ h4 {
     background: #06ce59;
     color: #dff9fb;
 }
-#map2{
+
+#map2 {
     display: none;
 }
 
@@ -224,7 +225,6 @@ h4 {
     .showcase {
         width: 100%;
     }
-
 
     .caption {
         width: 100%;
@@ -258,7 +258,6 @@ h4 {
     }
 
     .sale-tag {
-        font-size: 4vw;
         line-height: 1;
         margin: auto;
         padding: 5px 0;
@@ -270,6 +269,19 @@ h4 {
         height: auto;
     }
 
+    .cycle-slideshow {
+        display: block;
+        position: relative;
+        height: 300px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
     .buttons {
         display: none;
     }
@@ -279,17 +291,20 @@ h4 {
         text-align: center;
         margin-top: 20px;
     }
-    .land_owner{
+
+    .land_owner {
         padding-top: 10px;
     }
-    .caption{
+
+    .caption {
         padding-top: 10px;
         text-align: center;
     }
-    #map2{
+
+    #map2 {
         width: 100%;
         margin: 10px auto;
-        display: block;        
+        display: block;
     }
 }
 
